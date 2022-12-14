@@ -12,10 +12,12 @@ app.use(express.json());
 const postRouter = require("./src/routes/post.router.js");
 const commentRouter = require("./src/routes/comment.router.js");
 const bookingRouter = require("./src/routes/booking.router.js");
+const shopRouter = require("./src/routes/shop.router.js");
 
 app.use("/api", postRouter);
 app.use("/api", commentRouter);
 app.use("/api", bookingRouter);
+app.use("/api", shopRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");

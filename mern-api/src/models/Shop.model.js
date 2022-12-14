@@ -17,10 +17,12 @@ const ShopSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  post: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Post",
-  },
+  posts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Post",
+    },
+  ],
 });
 
-module.exports = mongoose.model("Booking", ShopSchema);
+module.exports = mongoose.model("Shop", ShopSchema);

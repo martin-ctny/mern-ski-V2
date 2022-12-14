@@ -38,6 +38,11 @@ const postSchema = new mongoose.Schema({
       ref: "Booking",
     },
   ],
+  shop: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Shop",
+    required: true,
+  },
   isAvailable: {
     type: Boolean,
     default: true,
