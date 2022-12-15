@@ -1,5 +1,5 @@
 import { useState } from "react";
-import shopsService from "../setup/services/shop.service";
+import shopsService from "../../setup/services/shop.service";
 
 const UpdateLogo = ({ shop, fetchShop }) => {
   const [logo, setLogo] = useState("");
@@ -27,7 +27,6 @@ const UpdateLogo = ({ shop, fetchShop }) => {
   return (
     <div>
       <img src={shop.logo} alt="" />
-
       {update !== true ? (
         <button onClick={handleClick}> Modifier</button>
       ) : (

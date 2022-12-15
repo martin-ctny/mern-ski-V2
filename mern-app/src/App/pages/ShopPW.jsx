@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Password from "../components/Password";
 import PostsShopList from "../components/PostsShopList";
-import shopsService from "../setup/services/shop.service";
+import shopsService from "../../setup/services/shop.service";
 
 const ShopPW = () => {
   const { id } = useParams();

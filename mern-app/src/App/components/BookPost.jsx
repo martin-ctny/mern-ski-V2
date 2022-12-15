@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import postsService from "../setup/services/post.service";
+import postsService from "../../setup/services/post.service";
 
 const BookPost = () => {
   const { _id } = useParams();

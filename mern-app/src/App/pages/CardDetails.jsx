@@ -4,7 +4,7 @@ import AddComments from "../components/AddComments";
 import BookPost from "../components/BookPost";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import postsService from "../setup/services/post.service";
+import postsService from "../../setup/services/post.service";
 
 const CardDetails = ({ posts }) => {
   const naviguate = useNavigate();

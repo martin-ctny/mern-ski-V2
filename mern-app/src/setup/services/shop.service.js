@@ -13,6 +13,10 @@ const updateShop = async (id, data) => {
   const response = await instance.put(`/shops/${id}`, data);
   return response.data;
 };
+const getBookings = async () => {
+  const response = await instance.get("/bookings");
+  return response.data;
+};
 
 const shopsService = {
   getShops,

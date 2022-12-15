@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import postsService from "../setup/services/post.service";
+import postsService from "../../setup/services/post.service";
 
 const AddComments = ({ fetchPost, id }) => {
   const [newComments, setNewComments] = useState({

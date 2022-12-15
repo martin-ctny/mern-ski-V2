@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import postsService from "../setup/services/post.service";
+import { Link, useNavigate } from "react-router-dom";
+import postsService from "../../setup/services/post.service";
 import UpdateLogo from "./UpdateLogo";
 
 const PostsShopList = ({ shop, fetchShop }) => {
@@ -23,10 +23,12 @@ const PostsShopList = ({ shop, fetchShop }) => {
   return (
     <div>
       <UpdateLogo shop={shop} fetchShop={fetchShop} />
+      <Link to={`/shops/booking/${shop._id}`}>Voir les réservations</Link>
+
       <button onClick={handleCreate}>Creer un post</button>
 
       {shop.posts.map((post) => (
-        <div className="card" key={post.id}>
+        <div className="card" key={post._id}>
           <h2>{post.title}</h2>
           <p>{post.description}</p>
           <p>{post.price}</p>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import postsService from "../setup/services/post.service";
+import postsService from "../../setup/services/post.service";
 
 const ShopsForm = () => {
   const navigate = useNavigate();

@@ -6,7 +6,9 @@ const BookingController = {
     try {
       const booking = new Booking(req.body);
       const newBooking = await booking.save();
-      const post = await Post.findById(req.body.post);
+      console.log(newBooking);
+      const post = await Post.findById(newBooking.post);
+      console.log(post);
       post.booking.push(newBooking._id);
       post.isAvailable = false;
       await post.save();

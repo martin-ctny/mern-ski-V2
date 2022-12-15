@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import MapShops from "../components/MapShops";
-import shopService from "../setup/services/shop.service";
+import shopService from "../../setup/services/shop.service";
 
 const ShopList = () => {
   const [shopList, setShopList] = useState([]);
