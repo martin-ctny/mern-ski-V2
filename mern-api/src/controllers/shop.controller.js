@@ -17,6 +17,14 @@ const ShopController = {
       res.status(404).send({ message: err.message });
     }
   },
+  getOne: async (req, res) => {
+    try {
+      const shop = await Shop.findById(req.params.id).populate("posts");
+      res.send(shop);
+    } catch (err) {
+      res.status(404).send({ message: err.message });
+    }
+  },
 };
 
 module.exports = ShopController;

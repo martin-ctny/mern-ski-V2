@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CardDetails from "./App/CardDetails";
 import { useEffect, useState } from "react";
 import postsService from "./setup/services/post.service";
+import ShopList from "./App/ShopList";
+import ShopPW from "./App/ShopPW";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -23,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<PostList posts={posts} />} />
           <Route path="/posts/:_id" element={<CardDetails posts={posts} />} />
+          <Route path="/shops" element={<ShopList />} />
+          <Route path="/shops/:id" element={<ShopPW />} />
         </Routes>
       </BrowserRouter>
     </>
