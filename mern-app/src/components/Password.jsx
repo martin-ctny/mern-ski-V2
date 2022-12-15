@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-const Password = ({ shop }) => {
-  const navigate = useNavigate();
+const Password = ({ shop, setIsConnected }) => {
   const [password, setPassword] = useState("");
   const handleChange = (e) => {
     console.log(e.target.value);
@@ -11,7 +9,7 @@ const Password = ({ shop }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (shop.password == password) {
-      navigate(`/shops/sucess`);
+      setIsConnected(true);
     } else {
       alert("Please enter the correct password");
     }

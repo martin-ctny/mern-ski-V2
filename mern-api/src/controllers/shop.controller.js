@@ -25,6 +25,17 @@ const ShopController = {
       res.status(404).send({ message: err.message });
     }
   },
+  update: async (req, res) => {
+    try {
+      const shop = await Shop.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+      });
+      res.send(shop);
+      return shop;
+    } catch (err) {
+      res.status(404).send({ message: err.message });
+    }
+  },
 };
 
 module.exports = ShopController;

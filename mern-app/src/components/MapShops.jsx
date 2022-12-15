@@ -10,7 +10,7 @@ const MapShops = ({ shopList }) => {
     <div>
       {shopList.map((shop) => (
         <div key={shop.id}>
-          <img src={shop.image_url} alt={shop.name} />
+          <img src={shop.logo} alt={shop.name} />
           <p>{shop.adress}</p>
           <button onClick={(e) => handleClick(e, shop._id)}>
             accedez au shop

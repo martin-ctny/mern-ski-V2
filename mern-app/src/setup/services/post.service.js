@@ -8,6 +8,18 @@ const getOnePost = async (id) => {
   const response = await instance.get(`/posts/${id}`);
   return response.data;
 };
+const deletePost = async (id) => {
+  const response = await instance.delete(`/posts/${id}`);
+  return response.data;
+};
+const createPost = async (data) => {
+  const response = await instance.post("/posts", data);
+  return response.data;
+};
+const updatePost = async (id, data) => {
+  const response = await instance.put(`/posts/${id}`, data);
+  return response.data;
+};
 
 const postComments = async (credentials) => {
   const response = await instance.post("/comments", credentials);
@@ -21,8 +33,11 @@ const postBooking = async (credentials) => {
 const postsService = {
   getPosts,
   getOnePost,
+  createPost,
+  updatePost,
   postComments,
   postBooking,
+  deletePost,
 };
 
 export default postsService;
