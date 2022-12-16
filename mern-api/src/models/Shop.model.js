@@ -22,6 +22,12 @@ const ShopSchema = new mongoose.Schema({
       ref: "Post",
     },
   ],
+  booking: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Booking",
+    },
+  ],
 });
 
 module.exports = mongoose.model("Shop", ShopSchema);

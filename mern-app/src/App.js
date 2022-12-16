@@ -8,7 +8,8 @@ import ShopList from "./App/pages/ShopList";
 import ShopPW from "./App/pages/ShopPW";
 import ShopsForm from "./App/components/ShopsForm";
 import Header from "./App/layout/Header";
-import BookingList from "./App/components/BookingList";
+
+import AllBookings from "./App/components/AllBookings";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -33,7 +34,7 @@ function App() {
             <Route path="/shops/:id" element={<ShopPW />} />
             <Route path="/shops/editform/:idShop" element={<ShopsForm />} />
             <Route path="/shops/postform/:idPost" element={<ShopsForm />} />
-            <Route path="/shops/booking/:id" element={<BookingList />} />
+            <Route path="/shops/booking/:id" element={<AllBookings />} />
           </Routes>
         </Header>
       </BrowserRouter>

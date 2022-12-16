@@ -56,8 +56,6 @@ const BookingList = () => {
           {posts.map((post) =>
             post.map((book) => <p>{book.telephoneNumber}</p>)
           )}
-          {posts.map((post) => post.map((book) => <p>{book._id}</p>))}
-          {posts.map((post) => post.map((book) => <p>{book.createdAt}</p>))}
         </div>
       )}
     </div>

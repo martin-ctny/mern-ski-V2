@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SizeSearch from "../components/SizeSearch";
+import StyleSearch from "../components/StyleSearch";
+import WeightSearch from "../components/WeightSearch";
 
 const PostList = ({ posts }) => {
   const [isSearch, setIsSearch] = useState(false);
@@ -28,7 +31,22 @@ const PostList = ({ posts }) => {
 
   return (
     <div className="map">
-      <input onChange={handleSearch} type="rechercher" />{" "}
+      <input onChange={handleSearch} type="text" placeholder="rechercher" />
+      <WeightSearch
+        setIsSearch={setIsSearch}
+        posts={posts}
+        setSearch={setSearch}
+      />
+      <StyleSearch
+        setIsSearch={setIsSearch}
+        posts={posts}
+        setSearch={setSearch}
+      />
+      <SizeSearch
+        setIsSearch={setIsSearch}
+        posts={posts}
+        setSearch={setSearch}
+      />
       {isSearch
         ? search.map((post) => (
             <div className="card" key={post.id}>
