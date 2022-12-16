@@ -55,10 +55,13 @@ const CardDetails = () => {
           <div className="rightDetails">
             <StarsMedium post={post} />
             <h2>{post.title}</h2>
-            <h2>{post.weight} kg</h2>
-            <h2>{post.style}</h2>
-            <h2>{post.price}€ / J</h2>
-            <h2>{post.size} cm</h2>
+            <div className="description">
+              <h2>{post.weight} kg</h2>
+              <h2>{post.style}</h2>
+
+              <h2>{post.price}€ / J</h2>
+              <h2>{post.size} cm</h2>
+            </div>
             <h3>{post.description}</h3>
           </div>
         </div>
