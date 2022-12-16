@@ -1,3 +1,6 @@
+body {
+  padding: 0px 80px;
+}
 .App {
   text-align: center;
 }
@@ -37,14 +40,22 @@
   }
 }
 .card {
-  margin-top: 10px;
-  background-color: #61dafb;
+  margin-top: 30px;
+  background-color: rgb(219, 218, 248);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 .right {
   display: flex;
+
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.rightDetails {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   flex-wrap: wrap;
   gap: 10px;
@@ -58,10 +69,11 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 100px;
-  width: 100vw;
+  height: 60px;
+  width: 100%;
   background-color: #d3d0d0;
   color: white;
+  margin-bottom: 30px;
 }
 .link {
   font-size: 20px;
@@ -70,4 +82,45 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+.filter {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+select {
+  padding: 0px 80px 0px 10px;
+}
+.imgPost {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+.btn {
+  height: 50px;
+  width: 100px;
+}
+.topComment {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+.comment {
+  margin-top: 20px;
+  height: 100px;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 200;
+}
+.all-comments {
+  width: 40%;
+}
+.shops {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
 }

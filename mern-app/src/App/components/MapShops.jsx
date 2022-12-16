@@ -7,10 +7,11 @@ const MapShops = ({ shopList }) => {
     navigate(`/shops/${_id}`);
   };
   return (
-    <div>
+    <div className="shops">
       {shopList.map((shop) => (
         <div key={shop.id}>
           <img src={shop.logo} alt={shop.name} />
+          <h2>{shop.name}</h2>
           <p>{shop.adress}</p>
           <button onClick={(e) => handleClick(e, shop._id)}>
             accedez au shop

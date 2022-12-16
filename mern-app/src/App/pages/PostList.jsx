@@ -31,26 +31,28 @@ const PostList = ({ posts }) => {
 
   return (
     <div className="map">
-      <input onChange={handleSearch} type="text" placeholder="rechercher" />
-      <WeightSearch
-        setIsSearch={setIsSearch}
-        posts={posts}
-        setSearch={setSearch}
-      />
-      <StyleSearch
-        setIsSearch={setIsSearch}
-        posts={posts}
-        setSearch={setSearch}
-      />
-      <SizeSearch
-        setIsSearch={setIsSearch}
-        posts={posts}
-        setSearch={setSearch}
-      />
+      <div className="filter">
+        <input onChange={handleSearch} type="text" placeholder="rechercher" />
+        <WeightSearch
+          setIsSearch={setIsSearch}
+          posts={posts}
+          setSearch={setSearch}
+        />
+        <StyleSearch
+          setIsSearch={setIsSearch}
+          posts={posts}
+          setSearch={setSearch}
+        />
+        <SizeSearch
+          setIsSearch={setIsSearch}
+          posts={posts}
+          setSearch={setSearch}
+        />
+      </div>
       {isSearch
         ? search.map((post) => (
             <div className="card" key={post.id}>
-              <img src={post.imageUrl} alt="" />
+              <img className="imgPost" src={post.imageUrl} alt="" />
               <div className="right">
                 <h2>{post.title}</h2>
                 <h2>poids : {post.weight}</h2>
@@ -67,7 +69,7 @@ const PostList = ({ posts }) => {
           ))
         : posts.map((post) => (
             <div className="card" key={post.id}>
-              <img src={post.imageUrl} alt="" />
+              <img className="imgPost" src={post.imageUrl} alt="" />
               <div className="right">
                 <h2>{post.title}</h2>
                 <h2>poids : {post.weight}</h2>
